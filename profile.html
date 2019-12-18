@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <div class="cover">
+        <div class="img-holder">
+            <img src="img/cover.jpg" alt="">
+        </div>
+        <div class="profile">
+            <img src="" alt="">
+        </div>
+        
+    </div>
+    <div class="info">
+        <a href="#" class="logout">Logout</a>
+        <h3 class="name"></h3>
+        <h5 class="job"></h5>
+        <p></p>
+    </div>
+
+
+    <script>
+       let users = JSON.parse(localStorage.getItem('users'));
+       let user_id = Number(localStorage.getItem('token'));
+       for(let user of users){
+           if(user.id ===  user_id){
+               document.querySelector('.profile img').src = user.img;
+               document.querySelector('.info h3').innerHTML = user.name;
+               document.querySelector('.info h5').innerHTML = user.job;
+               document.querySelector('.info p').innerHTML = user.email;
+           } 
+       }
+
+       document.querySelector('.info .logout').addEventListener('click', function(e){
+            e.preventDefault();
+            localStorage.removeItem('token')
+            window.location = 'login.html'
+       })
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+@font-face{
+    font-family: "me";
+    src: url('Anton/Acme-Regular.ttf')
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #eee;
+    font-family: "me", sans-serif;
+}
+#login{
+    background-color: #FFF;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, .2);
+    width: 40%;
+    margin: 100px auto;
+    padding: 30px;
+    border-bottom: 3px solid crimson;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#login h2{
+    color: crimson;
+    border-left: 2px solid crimson;
+    padding: 10px 20px ;
+    margin-left: -30px;
+}
+#login .form-group{
+    margin: 15px 0;
+}
+#login .form-group input{
+    display: block;
+    padding: 12px 8px;
+    font-size: 16px;
+    width: 90%;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    transition: all ease .4s
+
+}
+#login .form-group input[type="email"]:focus,
+#login .form-group input[type="password"]:focus{
+    background-color: #fafafa;
+    border-color: #eee;
+    box-shadow: none;
+    outline: none
+}
+#login .form-group input[type="submit"]{
+    background-color: crimson;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 50px
+}
+#login .form-group input[type="submit"]:hover,
+#login .form-group input[type="submit"]:focus{
+    border-color: crimson !important;
+    outline: none;
+    box-shadow: none;
+    background-color: rgb(180, 28, 58)
+}
+
+
+
+
+
+
+.error{
+    color: red;
+    padding: 5px;
+}
+
+/*=============================================== PROFILE PAGE ================================================*/
+
+.cover{
+    position: relative;
+    
+}
+.cover .img-holder{
+    height: 300px;
+    overflow: hidden;
+}
+.cover img{
+    object-fit: contain
+}
+.cover .profile{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 200px;
+    height: 200px;
+    border: 2px solid #eee;
+    overflow: hidden;
+    border-radius: 50%;
+    z-index: 99;
+}
+
+.info{
+    margin-top: 130px;
+    text-align: center;
+    position: relative;
+    padding: 30px;
+    background-color: #eee;
+}
+.info .logout{
+    background-color: crimson;
+    padding: 10px 25px;
+    text-decoration: none;
+    color: #FFF;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    cursor: pointer;
+}
+.info .name{
+    color: crimson
+}
+.info p{
+    color: #777;
+    text-decoration: underline
+}
